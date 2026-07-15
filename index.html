@@ -1,16 +1,127 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Website</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SecurePass</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <h1>Hallo Welt!</h1>
-  <img src="https://via.placeholder.com/300" alt="Platzhalterbild">
-  <button onclick="sagHallo()">Klick mich!</button>
-  <p>Das ist meine erste Website.</p>
-  <script src="script.js"></script>
+
+<div class="background"></div>
+
+
+<div class="box">
+
+    <div class="logo">
+        🔐 SecurePass
+    </div>
+
+
+    <h1>
+        Sicheres Passwort
+    </h1>
+
+    <p>
+        Erstelle starke Passwörter in Sekunden.
+    </p>
+
+
+    <div class="password-area">
+
+        <input id="password" readonly>
+
+        <button id="copy">
+            📋
+        </button>
+
+    </div>
+
+
+    <div class="setting">
+
+        <label>
+            Passwortlänge:
+            <span id="lengthText">16</span>
+        </label>
+
+        <input 
+        type="range"
+        id="length"
+        min="6"
+        max="40"
+        value="16">
+
+    </div>
+
+
+
+    <div class="options">
+
+
+        <label>
+            <input type="checkbox" id="upper" checked>
+            Großbuchstaben
+        </label>
+
+
+        <label>
+            <input type="checkbox" id="lower" checked>
+            Kleinbuchstaben
+        </label>
+
+
+        <label>
+            <input type="checkbox" id="number" checked>
+            Zahlen
+        </label>
+
+
+        <label>
+            <input type="checkbox" id="symbol" checked>
+            Sonderzeichen
+        </label>
+
+
+    </div>
+
+
+
+    <div class="strength">
+
+        <div>
+            Stärke:
+            <span id="strengthText">
+                Stark
+            </span>
+        </div>
+
+        <div class="bar">
+
+            <div id="fill"></div>
+
+        </div>
+
+    </div>
+
+
+
+    <button id="generate">
+        Neues Passwort erstellen
+    </button>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
